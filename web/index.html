@@ -8,9 +8,130 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <title>Formulario tarea no.2 Bryan Martinez</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   
+        
+        
     </head>
     <body>
+        <style>
+            body {
+            background-color: #ffdd90;
+            
+          }
+        </style>
+        
+        
         <div>FELICIDADES</div>
         <a href="ClienteController">Link para el servlet</a>
+    
+       <div class="container">
+        <div class="row">
+            <div class="col">               
+                <div class="shadow-lg p-3 mb-5 mt-4 bg-body rounded">                                    
+                    <div align="center" class="p-3 mb-2 bg-primary bg-gradient fw-bold text-white">Formulario de registro</div>
+                    <form  class="row g-3 needs-validation" novalidate>
+                        
+                        <!-- Primer espacio para el codigo en el formulario -->
+                        
+                        <div class="col-md-4 position-relative">
+                            <label for="nombre" class="form-label">Codigo</label>
+                            <input type="text" class="form-control" id="codigo" placeholder="0000-00-0000" required>
+                            <!-- Mensajes para validación   -->
+                            <div class="valid-tooltip">EXCELENTE</div>
+                            <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
+                        </div>
+                        
+                        <!-- Segundo espacio para el nombre en el formulario -->
+                        
+                        <div class="col-md-4 position-relative">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Primer nombre" required>
+                            <!-- Mensajes para validación   -->
+                            <div class="valid-tooltip">EXCELENTE</div>
+                            <div class="invalid-tooltip">DATOS INCOMPLETOS.</div>
+                        </div>
+                        
+                        <!-- Tercer espacio para el apellido en el formulario -->
+                        
+                        <div class="col-md-4 position-relative">
+                            <label for="apellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" placeholder="Primer apellido" required>
+                            <!-- Mensajes para validación   -->
+                            <div class="valid-tooltip">EXCELENTE</div>
+                            <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
+                        </div>
+                        
+                        <!-- Cuarto espacio para la direccion en el formulario -->
+                        
+                        <div class="col-md-4 position-relative">
+                            <label for="nombre" class="form-label">Direccion</label>
+                            <input type="text" class="form-control" id="direccion" placeholder="Ciudad, calle, avenida" required>
+                            <!-- Mensajes para validación   -->
+                            <div class="valid-tooltip">EXCELENTE</div>
+                            <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
+                        </div>
+                        
+                        <!-- Quinto espacio para el correo personal del usuario en el formulario -->
+                        
+                        <div class="col-md-4 position-relative">
+                            <label for="nombre" class="form-label">Correo</label>
+                            <input type="text" class="form-control" id="telefono" placeholder="ejemplo@miumg.com" required>
+                            <!-- Mensajes para validación   -->
+                            <div class="valid-tooltip">EXCELENTE</div>
+                            <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
+                        </div>
+                        
+                        <!-- Sexto y ultimo espacio para el numero de telefono o celular en el formulario -->
+                        
+                        <div class="col-md-4 position-relative">
+                            <label for="nombre" class="form-label">Telefono</label>
+                            <input type="text" class="form-control" id="telefono" placeholder="502 ****-****" required>
+                            <!-- Mensajes para validación   -->
+                            <div class="valid-tooltip">EXCELENTE</div>
+                            <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
+                        </div>
+                        
+                        <p>¿Deseas registrarte?, llena el formulario completo con tus datos, y registrate.</p>
+                            
+                        <!-- Boton enviar -->
+                        
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="boton">Enviar</button>
+                            
+                        </div>
+                        
+                        
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <script>        
+    (function () {
+      'use strict'
+
+      // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+      var forms = document.querySelectorAll('.needs-validation')
+
+      //Recorremos los forms y evitamos en envío sin validacion
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+        </script>    
     </body>
 </html>
