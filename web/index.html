@@ -17,27 +17,46 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     <body>
         <style>
             body {
-            background-color: #ffdd90;
+            background-color: #B4B2B2;
             
           }
         </style>
         
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Menu</a>
+                <div align="center" class="text-white">Bryan Martinez 0909-20-6903</div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index">Formulario</a>
+                    <a class="nav-link" href="ClienteController">Datos</a>
+                    <a class="nav-link" href="#">Ayuda</a>
+                  </div>
+                </div>
+            </div>
+                  
+        </nav>
         
-        <div>FELICIDADES</div>
-        <a href="ClienteController">Link para el servlet</a>
-    
-       <div class="container">
+        
+        <div class="container">
         <div class="row">
+            
             <div class="col">               
                 <div class="shadow-lg p-3 mb-5 mt-4 bg-body rounded">                                    
-                    <div align="center" class="p-3 mb-2 bg-primary bg-gradient fw-bold text-white">Formulario de registro</div>
-                    <form  class="row g-3 needs-validation" novalidate>
+                    <div align="center" class="p-3 mb-2 bg-dark bg-gradient fw-bold text-white">Formulario de registro</div>
+                    
+                    <!-- FORMULARIO -->
+                    
+                    <form  action="ClienteController"  class="row g-3 needs-validation" novalidate>
                         
                         <!-- Primer espacio para el codigo en el formulario -->
                         
                         <div class="col-md-4 position-relative">
-                            <label for="nombre" class="form-label">Codigo</label>
-                            <input type="text" class="form-control" id="codigo" placeholder="0000-00-0000" required>
+                            <label for="codigo" class="form-label">Codigo</label>
+                            <input type="text" class="form-control" name="cod" placeholder="0000-00-0000" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
@@ -47,7 +66,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         
                         <div class="col-md-4 position-relative">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Primer nombre" required>
+                            <input type="text" class="form-control" name="primero" placeholder="Primer nombre" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS.</div>
@@ -57,7 +76,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         
                         <div class="col-md-4 position-relative">
                             <label for="apellido" class="form-label">Apellido</label>
-                            <input type="text" class="form-control" id="apellido" placeholder="Primer apellido" required>
+                            <input type="text" class="form-control" name="segundo" placeholder="Primer apellido" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
@@ -66,8 +85,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <!-- Cuarto espacio para la direccion en el formulario -->
                         
                         <div class="col-md-4 position-relative">
-                            <label for="nombre" class="form-label">Direccion</label>
-                            <input type="text" class="form-control" id="direccion" placeholder="Ciudad, calle, avenida" required>
+                            <label for="direccion" class="form-label">Direccion</label>
+                            <input type="text" class="form-control" name="ubicacion" placeholder="Ciudad, calle, avenida" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
@@ -76,8 +95,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <!-- Quinto espacio para el correo personal del usuario en el formulario -->
                         
                         <div class="col-md-4 position-relative">
-                            <label for="nombre" class="form-label">Correo</label>
-                            <input type="text" class="form-control" id="telefono" placeholder="ejemplo@miumg.com" required>
+                            <label for="correo" class="form-label">Correo</label>
+                            <input type="text" class="form-control" name="email" placeholder="ejemplo@miumg.com" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
@@ -86,8 +105,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <!-- Sexto y ultimo espacio para el numero de telefono o celular en el formulario -->
                         
                         <div class="col-md-4 position-relative">
-                            <label for="nombre" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" id="telefono" placeholder="502 ****-****" required>
+                            <label for="telefono" class="form-label">Telefono</label>
+                            <input type="number" class="form-control" name="celular" placeholder="502 ****-****" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
@@ -97,13 +116,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                             
                         <!-- Boton enviar -->
                         
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary" type="boton">Enviar</button>
-                            
-                        </div>
-                        
-                        
-                        
+                        <button class="btn btn-dark fw-bold" type="submit">Enviar</button> 
                     </form>
                 </div>
             </div>
