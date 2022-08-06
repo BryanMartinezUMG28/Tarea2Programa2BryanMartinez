@@ -34,27 +34,29 @@ public class ClienteController extends HttpServlet {
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             clientemodell= new ClienteModell();
-            
+            clientemodell.setCod(request.getParameter("cod"));
             clientemodell.setPrimero(request.getParameter("primero"));
             clientemodell.setSegundo(request.getParameter("segundo"));
             clientemodell.setUbicacion(request.getParameter("ubicacion"));
             clientemodell.setEmail(request.getParameter("email"));
-            
+            clientemodell.setCelular(request.getParameter("celular"));
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet ClienteController</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Mi primer servlet " + request.getContextPath() + "</h1>");         
-            out.println("<h2>" + clientemodell.getCod() + "</h2>");
-            out.println("<h2>" + clientemodell.getPrimero() + "</h2>");
-            out.println("<h2>" + clientemodell.getSegundo() + "</h2>");
-            out.println("<h2>" + clientemodell.getUbicacion() + "</h2>");
-            out.println("<h2>" + clientemodell.getEmail() + "</h2>");
-            out.println("<h2>" + clientemodell.getCelular() + "</h2>");
-            out.println("<h1>Servlet ClienteController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
+            out.println("<h1>DATOS DE FORMULARIO " + request.getContextPath() + "</h1>");         
+            out.println("<h2>Codigo:" + clientemodell.getCod() + "</h2>");
+            out.println("<h2>Nombre:" + clientemodell.getPrimero() + "</h2>");
+            out.println("<h2>Apellido:" + clientemodell.getSegundo() + "</h2>");
+            out.println("<h2>Direccion:" + clientemodell.getUbicacion() + "</h2>");
+            out.println("<h2>Correo electronico:" + clientemodell.getEmail() + "</h2>");
+            out.println("<h2>Telefono:" + clientemodell.getCelular() + "</h2>");
+            out.println("<h3>¿Quieres volver a crear un nuevo registro?</h3>");
+            out.println("<h3>Presiona regresar, y volveras al formulario de registro.</h3>");
+            out.println("<a href='index.html'>Regresar</a>");
+            out.println("</body>"); 
             out.println("</html>");
             
             

@@ -9,18 +9,18 @@ package Clases;
  * @author bryan
  */
 public class ClienteModell {
-    private int cod; 
+    private String cod;
     private String primero;
     private String segundo;
     private String ubicacion;
     private String email;
-    private int celular;
-
-    public int getCod() {
+    private String celular;
+    
+    public String getCod() {
         return cod;
     }
 
-    public void setCod(int cod) {
+    public void setCod(String cod) {
         this.cod = cod;
     }
 
@@ -56,13 +56,14 @@ public class ClienteModell {
         this.email = email;
     }
 
-    public int getCelular() {
+    public String getCelular() {
         return celular;
     }
 
-    public void setCelular(int celular) {
+    public void setCelular(String celular) {
         this.celular = celular;
     }
+
 
     
     
