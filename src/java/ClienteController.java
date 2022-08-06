@@ -46,7 +46,14 @@ public class ClienteController extends HttpServlet {
             out.println("<title>Servlet ClienteController</title>");            
             out.println("</head>");
             out.println("<body>");
-            
+            out.println("<h1>Mi primer servlet " + request.getContextPath() + "</h1>");         
+            out.println("<h2>" + clientemodell.getCod() + "</h2>");
+            out.println("<h2>" + clientemodell.getPrimero() + "</h2>");
+            out.println("<h2>" + clientemodell.getSegundo() + "</h2>");
+            out.println("<h2>" + clientemodell.getUbicacion() + "</h2>");
+            out.println("<h2>" + clientemodell.getEmail() + "</h2>");
+            out.println("<h2>" + clientemodell.getCelular() + "</h2>");
+            out.println("<h1>Servlet ClienteController at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
             
