@@ -53,14 +53,38 @@ public class ClienteController extends HttpServlet {
             out.println("<h2>Direccion:" + clientemodell.getUbicacion() + "</h2>");
             out.println("<h2>Correo electronico:" + clientemodell.getEmail() + "</h2>");
             out.println("<h2>Telefono:" + clientemodell.getCelular() + "</h2>");
+            out.println("<table class='default' bgcolor='#00FFFF' border='1' cellpadding='1' cellspacing='1'");
+            out.println("<tr>");
+            out.println("<th scope='row'>Codigo</th>");
+            out.println("<td>"+ clientemodell.getCod() + "</td>");
+            out.println("</tr>");
+            out.println("<tr>");
+            out.println("<th scope='row'>Nombre</th>");
+            out.println("<td>"+ clientemodell.getPrimero() + "</td>");
+            out.println("</tr>");
+            out.println("<tr>");
+            out.println("<th scope='row'>Apellido</th>");
+            out.println("<td>"+ clientemodell.getSegundo() + "</td>");
+            out.println("</tr>");
+            out.println("<tr>");
+            out.println("<th scope='row'>Direccion</th>");
+            out.println("<td>"+ clientemodell.getUbicacion() + "</td>");
+            out.println("</tr>");
+            out.println("<tr>");
+            out.println("<th scope='row'>Correo electronico</th>");
+            out.println("<td>"+ clientemodell.getEmail() + "</td>");
+            out.println("</tr>");
+            out.println("<tr>");
+            out.println("<th scope='row'>Telefono</th>");
+            out.println("<td>"+ clientemodell.getCelular() + "</td>");
+            out.println("</tr>");
+            out. println("</table>");
             out.println("<h3>¿Quieres volver a crear un nuevo registro?</h3>");
             out.println("<h3>Presiona regresar, y volveras al formulario de registro.</h3>");
             out.println("<a href='index.html'>Regresar</a>");
+            out.println("<button href='index.html' class='btn btn-success btn-lg'>BACK</button>");
             out.println("</body>"); 
-            out.println("</html>");
-            
-            
-            
+            out.println("</html>"); 
         }
     }
 
