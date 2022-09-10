@@ -9,54 +9,71 @@ package Clases;
  * @author bryan
  */
 public class ClienteModell {
-    private String cod;
-    private String primero;
-    private String segundo;
-    private String ubicacion;
-    private String email;
+    private String codigo;
+    private String nombres;
+    private String apellidos;
+    private String direccion;
+    private String correo;
     private String celular;
+    private String tipo;
     
-    public String getCod() {
-        return cod;
+    public ClienteModell(String codigo, String nombres, String apellidos, String correo, String direccion,String celular, String tipo){
+        this.codigo=codigo;
+        this.nombres=nombres;
+        this.apellidos=apellidos;
+        this.correo=correo;
+        this.direccion=direccion;  
+        this.celular=celular;
+        this.tipo=tipo;   
+    }
+    
+    public ClienteModell(){
+        this.nombres="Clientes de ejemplo";
     }
 
-    public void setCod(String cod) {
-        this.cod = cod;
+  
+
+    public String getCodigo() {
+        return codigo;
     }
 
-    public String getPrimero() {
-        return primero;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
-    public void setPrimero(String primero) {
-        this.primero = primero;
+    public String getNombres() {
+        return nombres;
     }
 
-    public String getSegundo() {
-        return segundo;
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
     }
 
-    public void setSegundo(String segundo) {
-        this.segundo = segundo;
+    public String getApellidos() {
+        return apellidos;
     }
 
-    public String getUbicacion() {
-        return ubicacion;
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
-    public void setUbicacion(String ubicacion) {
-        this.ubicacion = ubicacion;
+    public String getCorreo() {
+        return correo;
     }
 
-    public String getEmail() {
-        return email;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public String getCelular() {
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    
+     public String getCelular() {
         return celular;
     }
 
@@ -64,6 +81,18 @@ public class ClienteModell {
         this.celular = celular;
     }
 
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    
+    
+   
 
     
     

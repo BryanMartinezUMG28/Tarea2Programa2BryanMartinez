@@ -9,10 +9,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script  src="js/newjavascript.js" ></script> 
+        <script  src="js/script.js" ></script> 
       
     </head>
-    <body background="https://i.pinimg.com/originals/ea/61/23/ea6123f403ebc08658ee18d4908cd573.png" >
+    <body background="https://i.pinimg.com/originals/ea/61/23/ea6123f403ebc08658ee18d4908cd573.png">
         
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
@@ -42,13 +42,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     
                     <!-- FORMULARIO -->
                     
-                    <form  id="contact-form" action="ClienteController"  class="row g-3 needs-validation" novalidate>
+                    <form  method="POST" id="contact-form" name="contact-form" action="NewClass"  class="row g-3 needs-validation" novalidate>
                         
                         <!-- Primer espacio para el codigo en el formulario -->
                         
                         <div class="col-md-4 position-relative">
                             <label for="codigo" class="form-label">Codigo</label>
-                            <input type="text" class="form-control" name="cod" placeholder="0000-00-0000" required>
+                            <input type="text" class="form-control" name="codigo" id="codigo" placeholder="0000-00-0000" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
@@ -58,7 +58,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         
                         <div class="col-md-4 position-relative">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" name="primero" placeholder="Primer nombre" required>
+                            <input type="text" class="form-control" name="nombres" id="nombres" placeholder="Primer nombre" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS.</div>
@@ -68,7 +68,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         
                         <div class="col-md-4 position-relative">
                             <label for="apellido" class="form-label">Apellido</label>
-                            <input type="text" class="form-control" name="segundo" placeholder="Primer apellido" required>
+                            <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Primer apellido" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
@@ -78,7 +78,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         
                         <div class="col-md-4 position-relative">
                             <label for="direccion" class="form-label">Direccion</label>
-                            <input type="text" class="form-control" name="ubicacion" placeholder="Ciudad, calle, avenida" required>
+                            <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Ciudad, calle, avenida" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
@@ -88,7 +88,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         
                         <div class="col-md-4 position-relative">
                             <label for="correo" class="form-label">Correo</label>
-                            <input type="text" class="form-control" name="email" placeholder="ejemplo@miumg.com" required>
+                            <input type="text" class="form-control" name="correo" id="correo" placeholder="ejemplo@miumg.com" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
@@ -98,7 +98,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         
                         <div class="col-md-4 position-relative">
                             <label for="telefono" class="form-label">Telefono</label>
-                            <input type="number" class="form-control" name="celular" placeholder="502 ****-****" required>
+                            <input type="number" class="form-control" name="celular" id="celular" placeholder="502 ****-****" required>
                             <!-- Mensajes para validación   -->
                             <div class="valid-tooltip">EXCELENTE</div>
                             <div class="invalid-tooltip">DATOS INCOMPLETOS</div>
@@ -107,14 +107,77 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <p>¿Deseas registrarte?, llena el formulario completo con tus datos, y registrate.</p>
                             
                         <!-- Boton enviar -->
-                        <div class="form-group has-feedback">
+                       
                             <button class="btn btn-dark fw-bold" type="submit">Enviar</button> 
-                            <input type="submit" value="Boton en Utilizacion JavaScript" onclick="enviarFormOpUno()" class="submit-button btn btn-sucess">
-                            <button type="reset"  class="btn btn-danger">Borrar datos</button> 
-                            <input type="button" value="Enviar Form" onclick="enviarFormulario()" class="submit-button btn btn-sucess">
-                            <input type="button" value="Enviar Form two" onclick="enviarFormularioTwo()" class="submit-button btn btn-sucess" id="btn3">
-                        </div>
+                            
+                            <button type="reset"  class="btn btn-danger">Borrar datos</button> <br> <br> 
+                            
+                            <button type="button" onclick="enviarFormularioOpcion2()" class="btn btn-success">Guardar con JS</button>
+                            
+                        
                     </form>
+                </div>
+                <div class="p-3 bd-highlight">
+                    <div class="container" id="container2">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <td>Codigo</td>
+                                    <td>Nombres</td>
+                                    <td>Apellidos</td>
+                                    <td>Dirección</td>
+                                    <td>Correo</td>
+                                    <td>Telefono</td>
+                                    <td>Acción</td>
+                                    
+                                     
+                                </tr>
+                            </thead>
+                            <script>
+                                $('formulario-eliminar').submit(function(e){
+                                    e.preventDefault();
+                                    const swalWithBootstrapButtons = Swal.mixin({
+                                        customClass: {
+                                          confirmButton: 'btn btn-success',
+                                          cancelButton: 'btn btn-danger'
+                                        },
+                                        buttonsStyling: false
+                                      })
+
+                                      swalWithBootstrapButtons.fire({
+                                        title: 'Are you sure?',
+                                        text: "You won't be able to revert this!",
+                                        icon: 'warning',
+                                        showCancelButton: true,
+                                        confirmButtonText: 'Yes, delete it!',
+                                        cancelButtonText: 'No, cancel!',
+                                        reverseButtons: true
+                                      }).then((result) => {
+                                        if (result.isConfirmed) {
+                                          swalWithBootstrapButtons.fire(
+                                            'Deleted!',
+                                            'Your file has been deleted.',
+                                            'success'
+                                          )
+                                        } else if (
+                                          /* Read more about handling dismissals below */
+                                          result.dismiss === Swal.DismissReason.cancel
+                                        ) {
+                                          swalWithBootstrapButtons.fire(
+                                            'Cancelled',
+                                            'Your imaginary file is safe :)',
+                                            'error'
+                                          )
+                                        }
+                                      })
+                                    }
+                                    })
+                            </script>
+                            <tbody id="bodyTable" class="table-dark">
+
+                            </tbody>                     
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
