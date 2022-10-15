@@ -1,4 +1,3 @@
-
 function enviarFormulario(){
 	let request = new XMLHttpRequest();
 request.open('POST', 'NewClass', true);
@@ -53,8 +52,4 @@ function mostrarMensaje(){
   timer: 1500
 })
 }
-
-
-
-
 

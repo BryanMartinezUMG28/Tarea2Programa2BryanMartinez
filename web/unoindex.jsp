@@ -1,13 +1,15 @@
+<%-- 
+    Document   : index
+    Created on : 14/10/2022, 23:16:20
+    Author     : bryan
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
     <head>
         <title>Formulario tarea no.2 Bryan Martinez</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script  src="js/script.js" ></script> 
       
@@ -26,6 +28,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <a class="nav-link active" aria-current="page" href="index">Formulario</a>
                     <a class="nav-link" href="ClienteController">Datos</a>
                     <a class="nav-link" href="#">Ayuda</a>
+                    <a class="nav-link" href="index.jsp">Cerrar sesión</a>
                   </div>
                 </div>
             </div>
